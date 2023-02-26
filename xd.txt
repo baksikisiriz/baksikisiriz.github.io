@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+
+<html lang="tr">
+
+
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>For Fun!</title>
+
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <meta content="endercoder" name="author">
+
+    <link href="../assets/img/favicon.ico" rel="icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <link href="../assets/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="../assets/css/style.css" rel="stylesheet">
+
+    <style>
+
+	.ps-container .ps-scrollbar-x-rail {
+    position: absolute;
+
+    bottom: 3px;
+
+    height: 8px;
+
+    -webkit-border-radius: 4px;
+
+    -moz-border-radius: 4px;
+
+    border-radius: 4px;
+
+    opacity: 0;
+
+    filter: alpha(opacity=0);
+
+    -o-transition: background-color .2s linear, opacity .2s linear;
+
+    -webkit-transition: background-color .2s linear, opacity .2s linear;
+
+    -moz-transition: background-color .2s linear, opacity .2s linear;
+
+    transition: background-color .2s linear, opacity .2s linear;
+
+}
+
+
+
+.ps-container:hover .ps-scrollbar-x-rail,
+
+.ps-container.hover .ps-scrollbar-x-rail {
+
+    opacity: 0.6;
+
+    filter: alpha(opacity=60);
+
+}
+
+
+
+.ps-container .ps-scrollbar-x-rail:hover,
+
+.ps-container .ps-scrollbar-x-rail.hover {
+
+    background-color: #eee;
+
+    opacity: 0.9;
+
+    filter: alpha(opacity=90);
+
+}
+
+
+
+.ps-container .ps-scrollbar-x-rail.in-scrolling {
+
+    background-color: #eee;
+
+    opacity: 0.9;
+
+    filter: alpha(opacity=90);
+
+}
+
+
+
+.ps-container .ps-scrollbar-y-rail {
+
+    position: absolute;
+
+    right: 3px;
+
+    width: 8px;
+
+    -webkit-border-radius: 4px;
+
+    -moz-border-radius: 4px;
+
+    border-radius: 4px;
+
+    opacity: 0;
+
+    filter: alpha(opacity = 0);
+
+    -o-transition: background-color .2s linear, opacity .2s linear;
+
+    -webkit-transition: background-color .2s linear, opacity .2s linear;
+
+    -moz-transition: background-color .2s linear, opacity .2s linear;
+
+    transition: background-color .2s linear, opacity .2s linear;
+
+}
+
+
+
+.ps-container:hover .ps-scrollbar-y-rail,
+
+.ps-container.hover .ps-scrollbar-y-rail {
+
+    opacity: 0.6;
+
+    filter: alpha(opacity=60);
+
+}
+
+
+
+.ps-container .ps-scrollbar-y-rail:hover,
+
+.ps-container .ps-scrollbar-y-rail.hover {
+
+    background-color: #eee;
+
+    opacity: 0.9;
+
+    filter: alpha(opacity=90);
+
+}
+
+
+
+.ps-container .ps-scrollbar-y-rail.in-scrolling {
+
+    background-color: #eee;
+
+    opacity: 0.9;
+
+    filter: alpha(opacity=90);
+
+}
+
+
+
+.ps-container .ps-scrollbar-x {
+
+    position: absolute;
+
+    bottom: 0;
+
+    height: 8px;
+
+    background-color: #aaa;
+
+    -webkit-border-radius: 4px;
+
+    -moz-border-radius: 4px;
+
+    border-radius: 4px;
+
+    -o-transition: background-color .2s linear;
+
+    -webkit-transition: background-color.2s linear;
+
+    -moz-transition: background-color .2s linear;
+
+    transition: background-color .2s linear;
+
+}
+
+
+
+.ps-container.ie6 .ps-scrollbar-x {
+
+    font-size: 0; /* fixed scrollbar height in xp sp3 ie6 */
+
+}
+
+
+
+.ps-container .ps-scrollbar-x-rail:hover .ps-scrollbar-x,
+
+.ps-container .ps-scrollbar-x-rail.hover .ps-scrollbar-x {
+
+    background-color: blue;
+
+}
+
+
+
+.ps-container .ps-scrollbar-y {
+
+    position: absolute;
+
+    right: 0;
+
+    width: 8px;
+
+    background-color: red;
+
+    -webkit-border-radius: 4px;
+
+    -moz-border-radius: 4px;
+
+    border-radius: 4px;
+
+    -o-transition: background-color .2s linear;
+
+    -webkit-transition: background-color.2s linear;
+
+    -moz-transition: background-color .2s linear;
+
+    transition: background-color .2s linear;
+
+}
+
+
+
+.ps-container.ie6 .ps-scrollbar-y {
+
+    font-size: 0; /* fixed scrollbar height in xp sp3 ie6 */
+
+}
+
+
+
+.ps-container .ps-scrollbar-y-rail:hover .ps-scrollbar-y,
+
+.ps-container .ps-scrollbar-y-rail.hover .ps-scrollbar-y {
+
+    background-color: #999;
+
+}
+
+
+
+.ps-container.ie .ps-scrollbar-x,
+
+.ps-container.ie .ps-scrollbar-y {
+
+    visibility: hidden;
+
+}
+
+
+
+.ps-container.ie:hover .ps-scrollbar-x,
+
+.ps-container.ie:hover .ps-scrollbar-y,
+
+.ps-container.ie.hover .ps-scrollbar-x,
+
+.ps-container.ie.hover .ps-scrollbar-y {
+
+    visibility: visible;
+
+}
+
+
+
+.admin {
+
+	background: url(./assets/gif/sparkles.gif); 
+
+	background-repeat: no-repeat; 
+
+	background-size: cover; 
+
+	text-shadow: 0px 0px  10px; 10px aqua; 
+
+	color: aqua;
+
+}
+
+
+
+.webmaster {
+
+	background: url(./assets/gif/simsek.gif); 
+
+	background-repeat: no-repeat; 
+
+	background-size: cover; 
+
+	text-shadow: 0px 0px  10px; 10px red; 
+
+	color: red;
+
+}
+
+
+
+
+
+     #description {
+
+        border: 1px solid gray;
+
+        height:200px;
+
+        width: 400px;
+
+        overflow: hidden;
+
+        position: absolute;
+
+      }
+
+.c-lists{
+
+	list-style-type: "📣 ";
+
+}
+
+
+
+.row h6{
+
+    font-size: 1.0rem !important;
+
+}
+
+
+
+.row p{
+
+    font-size: 0.8rem !important;
+
+}
+
+
+
+.row i{
+
+    display: none;
+
+}
+
+    .col-sm-6 {
+
+        flex: 0 0 auto;
+
+        width: 50% !important;
+
+    }
+
+        body{
+
+            font-family: "Kanit", sans-serif;
+
+            cursor: url(../assets/cursor/default.cur), default;
+
+        }
+
+
+
+        a, a:hover, button, button:hover{
+
+            cursor: url(../assets/cursor/hover.cur), pointer !important;
+
+        }
+
+
+
+        input, input:hover{
+
+            cursor: url(../assets/cursor/third.cur), text;
+
+        }
+
+
+
+        select, select:hover{
+
+            cursor: url(./assets/cursor/default.cur), default;
+
+        }
+
+
+
+        .dropdown-menu a {
+
+            transition: 0.2s;
+
+        }
+
+
+
+        .dropdown-menu a:hover {
+
+            padding-left: 40px !important;
+
+            color: red !important;
+
+        }
+
+
+
+        .drop-gradient {
+
+            filter: drop-shadow(5px 5px 41px red);
+
+            animation: drop infinite 10s linear;
+
+        }
+
+        
+
+        .drop-gradient-1s {
+
+            filter: drop-shadow(5px 5px 41px red);
+
+            animation: drop infinite 9.5s linear;
+
+        }
+
+        
+
+        .drop-gradient-2s {
+
+            filter: drop-shadow(5px 5px 41px red);
+
+            animation: drop infinite 8s linear;
+
+        }
+
+
+
+        @keyframes drop {
+
+            0% { filter: drop-shadow(5px 5px 0px #FF0000); }
+
+            15% { filter: drop-shadow(5px 5px 0px #FF8200); }
+
+            30% { filter: drop-shadow(5px 5px 0px #FFFA00); }
+
+            45% { filter: drop-shadow(5px 5px 0px #32FF00); }
+
+            60% { filter: drop-shadow(5px 5px 0px #00FFE6); }
+
+            75% { filter: drop-shadow(5px 5px 0px #1400FF); }
+
+            90% { filter: drop-shadow(5px 5px 0px #7800FF); }
+
+            100% { filter: drop-shadow(5px 5px 0px #FF0000); }
+
+        }
+
+		#container::-webkit-scrollbar {
+
+			display: none;
+
+		}	
+
+		body::-webkit-scrollbar {
+
+			display: none;
+
+		}	
+
+		.oops::-webkit-scrollbar {
+
+			display: none;
+
+		}
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container-fluid position-relative d-flex p-0">
+
+        <div id="spinner" class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+
+                <span class="sr-only">Loading...</span>
+
+            </div>
+
+        </div>
+
+        
+
+<div class="rounded sidebar pe-4 pb-3" id="container" >
+
+<nav class="navbar bg-secondary navbar-dark" >
+
+    <a href="#" class="navbar-brand mx-4 mb-3">
+
+        <img src="../assets/img/zlogo.png" style="width: 110%;">
+
+    </a>
+
+    <div class="navbar-nav w-100">
+
+        <a href="/panel" class="nav-item nav-link active"><i class="fa fa-home me-2"></i>Anasayfa</a>
+
+        <div class="nav-item dropdown">
+
+            <a href="#" id="resize" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-database me-2"></i>Mernis</a>
+
+            <div class="dropdown-menu bg-secondary border-0">
+
+                <a  href="/ns-q" class="dropdown-item">Ad Soyad sorgu</a>
+
+				<a href="/mernis2015" class="dropdown-item">Seçmen sorgu</a>
+
+                <a href="/tc-q" class="dropdown-item">TC sorgu</a>
+
+                <a href="/a-q" class="dropdown-item">Aile sorgu</a>
+
+				<a href="/soyagaci" class="dropdown-item">Soy Ağacı sorgu</a>  
+
+                <a href="/Ad-q" class="dropdown-item">Adres sorgu</a>
+
+				<a href="/tapu" class="dropdown-item">Tapu sorgu</a>
+
+				<a href="/sicil" class="dropdown-item">Sicil sorgu</a>
+
+            </div>
+
+        </div>
+
+		
+
+		<div class="nav-item dropdown">
+
+            <a href="#" id="resize" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-phone me-2"></i>Telefon</a>
+
+            <div class="dropdown-menu bg-transparent border-0">
+
+                <a href="/Gt-q" class="dropdown-item">GSM'den TC</a>
+
+                <a href="/Tg-q" class="dropdown-item">TC'den GSM</a>
+
+				<a href="/operator" class="dropdown-item">Operatör sorgu</a>
+
+            </div>
+
+        </div>
+
+		
+
+		<div class="nav-item dropdown">
+
+            <a href="#" id="resize" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-building me-2"></i>Bina</a>
+
+            <div class="dropdown-menu bg-transparent border-0">
+
+                <a href="/hane" class="dropdown-item">Hane sorgu</a>  
+
+				<a href="/cadde" class="dropdown-item">Cadde sorgu</a>
+
+				<a href="/sokak" class="dropdown-item">Sokak sorgu</a>
+
+				<a href="/adres" class="dropdown-item">Adres sorgu V2</a>
+
+            </div>
+
+        </div>
+
+		
+
+    
+
+		
+
+		<div class="nav-item dropdown">
+
+            <a href="#" id="resize" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-graduation-cap me-2"></i>Kurum</a>
+
+            <div class="dropdown-menu bg-transparent border-0">
+
+                 <a href="/vesika" class="dropdown-item">-18 Vesika sorgu</a>
+
+				 <a href="/ehliyet" class="dropdown-item">+18 Vesika sorgu</a>
+
+				 <a href="/school" class="dropdown-item">E-Okul sorgu</a>
+
+				  <a href="/üniversite" class="dropdown-item">Üniversite sorgu</a>
+
+            </div>
+
+        </div>
+
+		
+
+			
+
+
+
+    
+
+        <div class="nav-item dropdown">
+
+            <a href="#" id="resize" class="nav-link dropdown-toggle" data-bs-toggle="dropdown"><i class="fa fa-wrench me-2"></i>Araçlar</a>
+
+            <div class="dropdown-menu bg-transparent border-0">
+
+                <a href="/iban" class="dropdown-item">Iban sorgu</a>
+
+                <a href="#" class="dropdown-item">SMS Bomber (BETA)</a>
+
+                <a href="/kimlikler" class="dropdown-item">Kimlik Arşivi</a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    </nav>
+
+    </div>
+
+        <div class="content">
+
+            <nav class="navbar navbar-expand bg-transparent navbar-dark sticky-top px-4 py-2">
+
+                <a href="#" class="sidebar-toggler px-2">
+
+                    <i class="fa fa-bars"></i>
+
+                </a>
+
+            </nav>
+
+            <div class="d-flex flex-column justify-content-center w-100 p-3">
+
+                <div class="bg-secondary rounded h-100 p-4">
+
+                    <h6 class="mb-4">Sicil Sorgu</h6>
+
+                    <p id="desc">Sorgulanacak kişinin TC Kimlik numarasını giriniz.</p>
+
+                    <div class="form-floating mb-3">
+
+                        <input type="text" oninput="numberOnly(this.id);" maxlength="11" class="form-control" id="TC" placeholder="31">
+
+                        <label for="floatingInput">TC Kimlik numarası</label>
+
+						<input type="hidden" id="pragma" value='Ali Roswell'>
+
+                    </div>
+
+                    <div class="form-floating">
+
+                        <button class="btn btn-outline-primary w-100" onclick="sorgula()" type="button">Sorgula</button>
+
+					</div>
+
+                <div class="bg-secondary rounded h-100 mt-2 p-4">
+
+                    <h6 class="mb-4" id="sayı"></h6>
+
+                    <div class="table-responsive table-bordered">
+
+                        <table class="table">
+
+                            <tbody id="tabledata">
+
+                            </tbody>
+
+                        </table>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+                    </div>
+
+    </div>
+
+    <script>
+
+        function sorgula() {
+
+            $.Toast.showToast({
+
+                "title": "Lütfen bekleyiniz",
+
+                "icon": "loading",
+
+                "duration": 60000
+
+            });
+
+            $.ajax({
+
+                url: "/API/xen/sicil/api.php",
+
+                type: "POST",
+
+                data: {
+
+                    tc: $("#TC").val(),
+
+					user: $("#pragma").val()
+
+                },
+
+                success: (res) => {
+
+                    var json = res;
+
+                    if (json.status === "true") {
+
+                        $.Toast.hideToast();
+
+                        document.getElementById("sayı").innerHTML = "Sütun sayısı: " + json.number;
+
+                        var array = [];
+
+                        for (var i = 0; i < json.number; i++) {
+
+                            var data = json.data[i];
+
+							var kimlik = data.KIMLIKTURU;
+
+                            var kayit = data.KAYIT;
+
+                            var tarih = data.TARIH;
+
+							var adsoyad = data.ADSOYAD;
+
+                            var yer = data.DOGUMYER;
+
+                            var sonuc = data.SORSONUC;
+
+							result = "<tr><th>KIMLIK TURU</th><td>" + kimlik + "</td></tr><tr><th>KAYIT ADI</th><td>" + kayit + "</td></tr><th>TARIH</th><td>" + tarih + "</td></tr><tr><th>ADI SOYADI</th><td>" + adsoyad + "</td></tr><tr><th>DOGUM TARIHI / YERI</th><td>" + yer + "</td></tr><tr><th>SORGU SONUCU</th><td>" + sonuc + "</td></tr>";						
+
+                            array.push(result);
+
+                        }
+
+                        $("#tabledata").html(array)
+
+                    } else {
+
+                        $.Toast.hideToast();
+
+                        Swal.fire({
+
+                            icon: "error",
+
+                            title: 'Bulunamadı!',
+
+                            html: 'Aradığınız kişiye ait bilgi bulamadık!',
+
+                            timer: 1500,
+
+                            timerProgressBar: true,
+
+                            willClose: () => {
+
+                                clearInterval(timerInterval)
+
+                            }
+
+                        })
+
+                    }
+
+                },
+
+                error: () => {
+
+                    $.Toast.hideToast();
+
+                    let timerInterval
+
+                    Swal.fire({
+
+                        icon: "error",
+
+                        title: 'Sunucu Hatası!',
+
+                        html: 'Içeriğe istedigimiz gibi erişemedik!',
+
+                        timer: 1500,
+
+                        timerProgressBar: true,
+
+                        willClose: () => {
+
+                            clearInterval(timerInterval)
+
+                        }
+
+                    })
+
+                }
+
+            })
+
+        }
+
+    </script>
+
+    
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.3/jquery.min.js" integrity="sha512-STof4xm1wgkfm7heWqFJVn58Hm3EtS31XFaagaa8VMReCXAkQnJZ+jEy8PCC/iT18dFy95WcExNHFTqLyp72eQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="../assets/js/jquery.toast.js"></script>
+
+<script src="../assets/js/main.js"></script>
+
+	<script>(function(e){"use strict";"function"==typeof define&&define.amd?define(["jquery"],e):"object"==typeof exports?e(require("jquery")):e(jQuery)})(function(e){"use strict";var t={wheelSpeed:1,wheelPropagation:!1,minScrollbarLength:null,maxScrollbarLength:null,useBothWheelAxes:!1,useKeyboard:!0,suppressScrollX:!1,suppressScrollY:!1,scrollXMarginOffset:0,scrollYMarginOffset:0,includePadding:!1},o=function(){var e=0;return function(){var t=e;return e+=1,".perfect-scrollbar-"+t}}();e.fn.perfectScrollbar=function(n,r){return this.each(function(){var l=e.extend(!0,{},t),a=e(this);if("object"==typeof n?e.extend(!0,l,n):r=n,"update"===r)return a.data("perfect-scrollbar-update")&&a.data("perfect-scrollbar-update")(),a;if("destroy"===r)return a.data("perfect-scrollbar-destroy")&&a.data("perfect-scrollbar-destroy")(),a;if(a.data("perfect-scrollbar"))return a.data("perfect-scrollbar");a.addClass("ps-container");var s,i,c,d,u,p,f,v,h,b,g=e("<div class='ps-scrollbar-x-rail'></div>").appendTo(a),m=e("<div class='ps-scrollbar-y-rail'></div>").appendTo(a),w=e("<div class='ps-scrollbar-x'></div>").appendTo(g),T=e("<div class='ps-scrollbar-y'></div>").appendTo(m),L=parseInt(g.css("bottom"),10),y=L===L,I=y?null:parseInt(g.css("top"),10),S=parseInt(m.css("right"),10),C=S===S,x=C?null:parseInt(m.css("left"),10),D="rtl"===a.css("direction"),X=o(),Y=parseInt(g.css("borderLeftWidth"),10)+parseInt(g.css("borderRightWidth"),10),P=parseInt(g.css("borderTopWidth"),10)+parseInt(g.css("borderBottomWidth"),10),k=function(e,t){var o=e+t,n=d-h;b=0>o?0:o>n?n:o;var r=parseInt(b*(p-d)/(d-h),10);a.scrollTop(r)},E=function(e,t){var o=e+t,n=c-f;v=0>o?0:o>n?n:o;var r=parseInt(v*(u-c)/(c-f),10);a.scrollLeft(r)},M=function(e){return l.minScrollbarLength&&(e=Math.max(e,l.minScrollbarLength)),l.maxScrollbarLength&&(e=Math.min(e,l.maxScrollbarLength)),e},W=function(){var e={width:c,display:s?"inherit":"none"};e.left=D?a.scrollLeft()+c-u:a.scrollLeft(),y?e.bottom=L-a.scrollTop():e.top=I+a.scrollTop(),g.css(e);var t={top:a.scrollTop(),height:d,display:i?"inherit":"none"};C?t.right=D?u-a.scrollLeft()-S-T.outerWidth():S-a.scrollLeft():t.left=D?a.scrollLeft()+2*c-u-x-T.outerWidth():x+a.scrollLeft(),m.css(t),w.css({left:v,width:f-Y}),T.css({top:b,height:h-P}),s?a.addClass("ps-active-x"):a.removeClass("ps-active-x"),i?a.addClass("ps-active-y"):a.removeClass("ps-active-y")},j=function(){g.hide(),m.hide(),c=l.includePadding?a.innerWidth():a.width(),d=l.includePadding?a.innerHeight():a.height(),u=a.prop("scrollWidth"),p=a.prop("scrollHeight"),!l.suppressScrollX&&u>c+l.scrollXMarginOffset?(s=!0,f=M(parseInt(c*c/u,10)),v=parseInt(a.scrollLeft()*(c-f)/(u-c),10)):(s=!1,f=0,v=0,a.scrollLeft(0)),!l.suppressScrollY&&p>d+l.scrollYMarginOffset?(i=!0,h=M(parseInt(d*d/p,10)),b=parseInt(a.scrollTop()*(d-h)/(p-d),10)):(i=!1,h=0,b=0,a.scrollTop(0)),b>=d-h&&(b=d-h),v>=c-f&&(v=c-f),W(),l.suppressScrollX||g.show(),l.suppressScrollY||m.show()},O=function(){var t,o;w.bind("mousedown"+X,function(e){o=e.pageX,t=w.position().left,g.addClass("in-scrolling"),e.stopPropagation(),e.preventDefault()}),e(document).bind("mousemove"+X,function(e){g.hasClass("in-scrolling")&&(E(t,e.pageX-o),j(),e.stopPropagation(),e.preventDefault())}),e(document).bind("mouseup"+X,function(){g.hasClass("in-scrolling")&&g.removeClass("in-scrolling")}),t=o=null},q=function(){var t,o;T.bind("mousedown"+X,function(e){o=e.pageY,t=T.position().top,m.addClass("in-scrolling"),e.stopPropagation(),e.preventDefault()}),e(document).bind("mousemove"+X,function(e){m.hasClass("in-scrolling")&&(k(t,e.pageY-o),j(),e.stopPropagation(),e.preventDefault())}),e(document).bind("mouseup"+X,function(){m.hasClass("in-scrolling")&&m.removeClass("in-scrolling")}),t=o=null},A=function(e,t){var o=a.scrollTop();if(0===e){if(!i)return!1;if(0===o&&t>0||o>=p-d&&0>t)return!l.wheelPropagation}var n=a.scrollLeft();if(0===t){if(!s)return!1;if(0===n&&0>e||n>=u-c&&e>0)return!l.wheelPropagation}return!0},B=function(){var e=!1,t=function(e){var t=e.originalEvent.deltaX,o=-1*e.originalEvent.deltaY;return(t===void 0||o===void 0)&&(t=-1*e.originalEvent.wheelDeltaX/6,o=e.originalEvent.wheelDeltaY/6),e.originalEvent.deltaMode&&1===e.originalEvent.deltaMode&&(t*=10,o*=10),t!==t&&o!==o&&(t=0,o=e.originalEvent.wheelDelta),[t,o]},o=function(o){var n=t(o),r=n[0],c=n[1];e=!1,l.useBothWheelAxes?i&&!s?(c?a.scrollTop(a.scrollTop()-c*l.wheelSpeed):a.scrollTop(a.scrollTop()+r*l.wheelSpeed),e=!0):s&&!i&&(r?a.scrollLeft(a.scrollLeft()+r*l.wheelSpeed):a.scrollLeft(a.scrollLeft()-c*l.wheelSpeed),e=!0):(a.scrollTop(a.scrollTop()-c*l.wheelSpeed),a.scrollLeft(a.scrollLeft()+r*l.wheelSpeed)),j(),e=e||A(r,c),e&&(o.stopPropagation(),o.preventDefault())};window.onwheel!==void 0?a.bind("wheel"+X,o):window.onmousewheel!==void 0&&a.bind("mousewheel"+X,o)},H=function(){var t=!1;a.bind("mouseenter"+X,function(){t=!0}),a.bind("mouseleave"+X,function(){t=!1});var o=!1;e(document).bind("keydown"+X,function(n){if(!(n.isDefaultPrevented&&n.isDefaultPrevented()||!t||e(document.activeElement).is(":input,[contenteditable]"))){var r=0,l=0;switch(n.which){case 37:r=-30;break;case 38:l=30;break;case 39:r=30;break;case 40:l=-30;break;case 33:l=90;break;case 32:case 34:l=-90;break;case 35:l=-d;break;case 36:l=d;break;default:return}a.scrollTop(a.scrollTop()-l),a.scrollLeft(a.scrollLeft()+r),o=A(r,l),o&&n.preventDefault()}})},K=function(){var e=function(e){e.stopPropagation()};T.bind("click"+X,e),m.bind("click"+X,function(e){var t=parseInt(h/2,10),o=e.pageY-m.offset().top-t,n=d-h,r=o/n;0>r?r=0:r>1&&(r=1),a.scrollTop((p-d)*r)}),w.bind("click"+X,e),g.bind("click"+X,function(e){var t=parseInt(f/2,10),o=e.pageX-g.offset().left-t,n=c-f,r=o/n;0>r?r=0:r>1&&(r=1),a.scrollLeft((u-c)*r)})},Q=function(){var t=function(e,t){a.scrollTop(a.scrollTop()-t),a.scrollLeft(a.scrollLeft()-e),j()},o={},n=0,r={},l=null,s=!1;e(window).bind("touchstart"+X,function(){s=!0}),e(window).bind("touchend"+X,function(){s=!1}),a.bind("touchstart"+X,function(e){var t=e.originalEvent.targetTouches[0];o.pageX=t.pageX,o.pageY=t.pageY,n=(new Date).getTime(),null!==l&&clearInterval(l),e.stopPropagation()}),a.bind("touchmove"+X,function(e){if(!s&&1===e.originalEvent.targetTouches.length){var l=e.originalEvent.targetTouches[0],a={};a.pageX=l.pageX,a.pageY=l.pageY;var i=a.pageX-o.pageX,c=a.pageY-o.pageY;t(i,c),o=a;var d=(new Date).getTime(),u=d-n;u>0&&(r.x=i/u,r.y=c/u,n=d),e.preventDefault()}}),a.bind("touchend"+X,function(){clearInterval(l),l=setInterval(function(){return.01>Math.abs(r.x)&&.01>Math.abs(r.y)?(clearInterval(l),void 0):(t(30*r.x,30*r.y),r.x*=.8,r.y*=.8,void 0)},10)})},R=function(){a.bind("scroll"+X,function(){j()})},z=function(){a.unbind(X),e(window).unbind(X),e(document).unbind(X),a.data("perfect-scrollbar",null),a.data("perfect-scrollbar-update",null),a.data("perfect-scrollbar-destroy",null),w.remove(),T.remove(),g.remove(),m.remove(),g=m=w=T=s=i=c=d=u=p=f=v=L=y=I=h=b=S=C=x=D=X=null},F=function(t){a.addClass("ie").addClass("ie"+t);var o=function(){var t=function(){e(this).addClass("hover")},o=function(){e(this).removeClass("hover")};a.bind("mouseenter"+X,t).bind("mouseleave"+X,o),g.bind("mouseenter"+X,t).bind("mouseleave"+X,o),m.bind("mouseenter"+X,t).bind("mouseleave"+X,o),w.bind("mouseenter"+X,t).bind("mouseleave"+X,o),T.bind("mouseenter"+X,t).bind("mouseleave"+X,o)},n=function(){W=function(){var e={left:v+a.scrollLeft(),width:f};y?e.bottom=L:e.top=I,w.css(e);var t={top:b+a.scrollTop(),height:h};C?t.right=S:t.left=x,T.css(t),w.hide().show(),T.hide().show()}};6===t&&(o(),n())},G="ontouchstart"in window||window.DocumentTouch&&document instanceof window.DocumentTouch,J=function(){var e=navigator.userAgent.toLowerCase().match(/(msie) ([\w.]+)/);e&&"msie"===e[1]&&F(parseInt(e[2],10)),j(),R(),O(),q(),K(),B(),G&&Q(),l.useKeyboard&&H(),a.data("perfect-scrollbar",a),a.data("perfect-scrollbar-update",j),a.data("perfect-scrollbar-destroy",z)};return J(),a})}});$('#container').perfectScrollbar();
+
+	</script></body>
+
+</html>
